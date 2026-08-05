@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="I Gede Hadrian Astrawinata — Digital Business Technology student, software developer, and digital artist. Building digital products through code, design, and creativity." />
+  <meta name="author" content="I Gede Hadrian Astrawinata" />
+  <title>Hadrian Astrawinata — Developer, Designer & Digital Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0d'/%3E%3Ctext x='16' y='22' font-family='Space Grotesk,sans-serif' font-weight='700' font-size='18' text-anchor='middle' fill='%2334c39a'%3EH%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Hadrian home">
+        <span class="brand-badge" aria-hidden="true">H</span>
+        <span class="brand-name">Hadrian<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="siteNav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm hide-sm">Let's talk</a>
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 5 5 5 5 0 0 0-5-5Z"/></svg>
+          <svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <span class="eyebrow hero-eyebrow">Hello, I'm Hadrian</span>
+        <h1 class="hero-title">
+          I build digital products through <span class="text-grad">code</span>,
+          <br class="d-md" /><span class="text-grad grad-2">design</span>, and creativity.
+        </h1>
+
+        <div class="fan-stage" id="fanStage" aria-label="What I do — code, design, art, automation">
+          <span class="chip chip-blue" style="--x:16%; --y:-6%;">&lt;code /&gt;</span>
+          <span class="chip chip-green" style="--x:80%; --y:-4%;">~ art</span>
+
+          <div class="fan" id="fan">
+            <!-- 7 cards representing the mix of code + design + art -->
+            <article class="card c1" style="--i:-3">
+              <div class="art">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&h=700&q=80"
+                     alt="Colorful code on a screen — React development" loading="lazy" decoding="async" />
+                <span class="tag-lbl">React</span>
+              </div>
+            </article>
+            <article class="card c2" style="--i:-2">
+              <div class="art">
+                <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&w=500&h=700&q=80"
+                     alt="Digital drawing tablet with illustration in progress" loading="lazy" decoding="async" />
+                <span class="tag-lbl light">Illustration</span>
+              </div>
+            </article>
+            <article class="card c3" style="--i:-1">
+              <div class="art">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=700&q=80"
+                     alt="Analytics dashboard on a laptop screen" loading="lazy" decoding="async" />
+                <span class="tag-lbl dark">Excel / VBA</span>
+              </div>
+            </article>
+            <article class="card c4" style="--i:0">
+              <div class="art">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=500&h=700&q=80"
+                     alt="Mobile phone held in hand showing an app interface" loading="lazy" decoding="async" />
+                <span class="tag-lbl">Flutter</span>
+              </div>
+            </article>
+            <article class="card c5" style="--i:1">
+              <div class="art">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b8?auto=format&fit=crop&w=500&h=700&q=80"
+                     alt="Designer working on UI wireframes in Figma" loading="lazy" decoding="async" />
+                <span class="tag-lbl dark">UI / UX</span>
+              </div>
+            </article>
+            <article class="card c6" style="--i:2">
+              <div class="art">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&h=700&q=80"
+                     alt="Close-up of an electronic circuit board" loading="lazy" decoding="async" />
+                <span class="tag-lbl light">ESP32 · IoT</span>
+              </div>
+            </article>
+            <article class="card c7" style="--i:3">
+              <div class="art">
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=500&h=700&q=80"
+                     alt="Modern website mockup on a laptop screen" loading="lazy" decoding="async" />
+                <span class="tag-lbl">Next.js</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="hero-sub">
+          Digital Business Technology student, software developer, and digital artist —
+          focused on websites, mobile apps, automation, and creative digital experiences that
+          are useful and pleasant to use.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">View My Portfolio</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me →</a>
+        </div>
+
+        <ul class="social" aria-label="Social links">
+          <li><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.5-.3-5.2-1.3-5.2-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.2 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3h-17A1.5 1.5 0 0 0 2 4.5v15A1.5 1.5 0 0 0 3.5 21h17a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 20.5 3ZM8 18H5V10h3Zm-1.5-9.3A1.7 1.7 0 1 1 8.2 7 1.7 1.7 0 0 1 6.5 8.7ZM19 18h-3v-4.5c0-1.1 0-2.5-1.5-2.5s-1.7 1.2-1.7 2.4V18h-3V10h2.9v1.2h.1a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7Z"/></svg>
+          </a></li>
+          <li><a href="mailto:hadrian.astrawinata@example.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 4v10h16V8l-8 5Zm0-2 8 5 8-5Z"/></svg>
+          </a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram — art portfolio">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4a4 4 0 0 1 1.5 1 4 4 0 0 1 1 1.5c.2.4.3 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3a4 4 0 0 1-1 1.5 4 4 0 0 1-1.5 1c-.4.2-1.1.3-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4a4 4 0 0 1-1.5-1 4 4 0 0 1-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3a4 4 0 0 1 1-1.5 4 4 0 0 1 1.5-1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.2 0-3.5 0-4.7.1-1.1 0-1.6.2-2 .4a2.3 2.3 0 0 0-.9.5 2.3 2.3 0 0 0-.5.9c-.2.4-.3.9-.4 2C3.4 8.5 3.4 8.8 3.4 12s0 3.5.1 4.7c0 1.1.2 1.6.4 2 .1.3.3.6.5.9.3.2.6.4.9.5.4.2.9.3 2 .4 1.2.1 1.5.1 4.7.1s3.5 0 4.7-.1c1.1 0 1.6-.2 2-.4.3-.1.6-.3.9-.5.2-.3.4-.6.5-.9.2-.4.3-.9.4-2 .1-1.2.1-1.5.1-4.7s0-3.5-.1-4.7c0-1.1-.2-1.6-.4-2a2.3 2.3 0 0 0-.5-.9 2.3 2.3 0 0 0-.9-.5c-.4-.2-.9-.3-2-.4C15.5 4 15.2 4 12 4Zm0 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm0 1.8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5-2.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ============ MARQUEE (tech stack) ============ -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>REACT</span><span>·</span>
+        <span>NEXT.JS</span><span>·</span>
+        <span>FLUTTER</span><span>·</span>
+        <span>DJANGO</span><span>·</span>
+        <span>TAILWIND</span><span>·</span>
+        <span>SUPABASE</span><span>·</span>
+        <span>FIGMA</span><span>·</span>
+        <span>EXCEL / VBA</span><span>·</span>
+        <span>SOLIDITY</span><span>·</span>
+        <span>ESP32</span><span>·</span>
+        <span>REACT</span><span>·</span>
+        <span>NEXT.JS</span><span>·</span>
+        <span>FLUTTER</span><span>·</span>
+        <span>DJANGO</span><span>·</span>
+        <span>TAILWIND</span><span>·</span>
+        <span>SUPABASE</span><span>·</span>
+        <span>FIGMA</span><span>·</span>
+        <span>EXCEL / VBA</span><span>·</span>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="eyebrow">About Me</span>
+          <h2>A tech student who codes, designs, and draws.</h2>
+          <p>
+            I'm an S1 Digital Business Technology student at Universitas Prasetiya Mulya
+            with a strong interest in software engineering, digital product development,
+            and creative technology.
+          </p>
+          <p>
+            I've built websites with React, Next.js, Tailwind CSS, and Django, and mobile
+            apps with Flutter and React Native. Alongside programming, I work on digital
+            illustration, graphic design, branding, and UI/UX design using Figma, Adobe
+            Illustrator, Adobe Photoshop, and Clip Studio Paint.
+          </p>
+          <p>
+            I like to build things that are technically solid but also look and feel good
+            to use. I also build automation with Microsoft Excel Macro / VBA to help with
+            recording, data processing, reporting, and daily business operations.
+          </p>
+        </div>
+
+        <aside class="about-card">
+          <dl class="about-info">
+            <div><dt>University</dt><dd>Universitas Prasetiya Mulya</dd></div>
+            <div><dt>Major</dt><dd>Digital Business Technology</dd></div>
+            <div><dt>Degree</dt><dd>Bachelor's Degree</dd></div>
+            <div><dt>GPA</dt><dd>4.00 / 4.00</dd></div>
+            <div><dt>Location</dt><dd>Tangerang, Indonesia</dd></div>
+            <div><dt>Interests</dt><dd>Software Engineering · AI · Web3 · IoT · Digital Art</dd></div>
+            <div><dt>Career Goal</dt><dd>Technopreneur &amp; Digital Product Developer</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Skills</span>
+          <h2>Things I build with.</h2>
+          <p>A mix of code, design, and automation tools I use for real projects.</p>
+        </header>
+
+        <div class="skill-groups">
+          <article class="skill-group">
+            <h3><span class="dot d-blue"></span>Web Development</h3>
+            <ul class="chips">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li>
+              <li>React.js</li><li>Next.js</li><li>Tailwind CSS</li><li>Bootstrap</li>
+              <li>Django</li><li>Django REST Framework</li><li>PHP</li><li>REST API</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3><span class="dot d-purple"></span>Mobile Development</h3>
+            <ul class="chips">
+              <li>Flutter</li><li>Dart</li><li>GetX</li>
+              <li>React Native</li><li>Expo Router</li><li>Firebase Integration</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3><span class="dot d-orange"></span>Database &amp; Backend</h3>
+            <ul class="chips">
+              <li>MySQL</li><li>MariaDB</li><li>SQLite</li><li>Supabase</li>
+              <li>Database Design</li><li>ERD</li><li>Authentication</li><li>API Integration</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3><span class="dot d-green"></span>Automation &amp; Data</h3>
+            <ul class="chips">
+              <li>Microsoft Excel</li><li>Excel Macro</li><li>VBA</li>
+              <li>Automated Reports</li><li>Sales &amp; Expense Recording</li>
+              <li>Inventory Automation</li><li>Business Dashboard</li>
+              <li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3><span class="dot d-red"></span>Creative &amp; Design</h3>
+            <ul class="chips">
+              <li>Digital Illustration</li><li>Character Illustration</li>
+              <li>Graphic Design</li><li>UI/UX Design</li>
+              <li>Figma</li><li>Adobe Illustrator</li><li>Adobe Photoshop</li>
+              <li>Clip Studio Paint</li><li>Canva</li><li>Adobe Premiere Pro</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3><span class="dot d-yellow"></span>Emerging Technology</h3>
+            <ul class="chips">
+              <li>AI Integration</li><li>Solidity</li><li>Hardhat</li>
+              <li>Ethers.js</li><li>MetaMask</li><li>EVM</li>
+              <li>ESP32</li><li>MQTT</li><li>Internet of Things</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Portfolio</span>
+          <h2>Selected projects.</h2>
+          <p>A mix of academic, internship, and personal work across web, mobile, IoT, and art.</p>
+        </header>
+
+        <div class="filters" id="filters" role="tablist" aria-label="Portfolio filters">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+          <button class="filter" data-filter="web" role="tab" aria-selected="false">Web Development</button>
+          <button class="filter" data-filter="mobile" role="tab" aria-selected="false">Mobile Applications</button>
+          <button class="filter" data-filter="art" role="tab" aria-selected="false">Digital Art</button>
+          <button class="filter" data-filter="uiux" role="tab" aria-selected="false">UI/UX Design</button>
+          <button class="filter" data-filter="excel" role="tab" aria-selected="false">Excel Automation</button>
+          <button class="filter" data-filter="ai-iot" role="tab" aria-selected="false">AI &amp; IoT</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid" aria-live="polite">
+          <!-- rendered by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Experience</span>
+          <h2>Where I've contributed.</h2>
+          <p>Roles, internships, and project work across organizations and independent builds.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3>Frontend Developer &amp; Liaison Officer Intern</h3>
+                <span class="tl-meta">PT Baliola Adi Maha Duta</span>
+              </div>
+              <p>
+                Built frontend interfaces with React.js and Tailwind CSS, explored
+                Solidity and blockchain implementation, and supported communication and
+                coordination for company activities.
+              </p>
+              <ul class="chips small">
+                <li>React.js</li><li>Tailwind CSS</li><li>Solidity</li><li>Blockchain</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3>Design Coordinator</h3>
+                <span class="tl-meta">Campus organizations &amp; events</span>
+              </div>
+              <p>
+                Directed the visual style, distributed design work, and kept design
+                consistency across publications, branding, and organizational events.
+                Managed asset production and coordinated the creative team.
+              </p>
+              <ul class="chips small">
+                <li>Visual Direction</li><li>Team Coordination</li><li>Branding</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-content">
+              <div class="tl-head">
+                <h3>Software Development Projects</h3>
+                <span class="tl-meta">Academic &amp; independent work</span>
+              </div>
+              <p>
+                Built a range of academic and independent projects — websites, mobile
+                apps, desktop apps, APIs, IoT systems, and digital product prototypes.
+              </p>
+              <ul class="chips small">
+                <li>Flutter</li><li>Django</li><li>Next.js</li><li>ESP32</li><li>Python</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="features services" id="services">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2>What I can help you build.</h2>
+          <p>From full products to focused tools — pick what fits.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="ic ic-blue"><svg viewBox="0 0 24 24"><path d="M3 5h18v12H3z M8 21h8"/></svg></div>
+            <h3>Website Development</h3>
+            <p>Landing pages, company profiles, portfolios, dashboards, and internal systems using React, Next.js, Tailwind, or Django.</p>
+          </article>
+          <article class="feature">
+            <div class="ic ic-purple"><svg viewBox="0 0 24 24"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z M11 18h2"/></svg></div>
+            <h3>Mobile App Development</h3>
+            <p>Cross-platform Android/iOS apps built with Flutter or React Native — from prototype to production.</p>
+          </article>
+          <article class="feature">
+            <div class="ic ic-green"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z M4 10h16 M10 4v16"/></svg></div>
+            <h3>Excel Macro &amp; Automation</h3>
+            <p>Automated Excel systems for sales, purchases, inventory, expenses, income, reports, input forms, and business dashboards.</p>
+          </article>
+          <article class="feature">
+            <div class="ic ic-orange"><svg viewBox="0 0 24 24"><path d="M4 4h16v10H4z M8 20h8 M12 14v6"/></svg></div>
+            <h3>UI/UX Design</h3>
+            <p>Wireframes, prototypes, mobile and web interfaces, dashboards, and design systems in Figma.</p>
+          </article>
+          <article class="feature">
+            <div class="ic ic-red"><svg viewBox="0 0 24 24"><path d="M4 20 20 4 M4 20l6-2 10-10-4-4L6 14z"/></svg></div>
+            <h3>Digital Illustration</h3>
+            <p>Character illustration, portraits, anime-inspired artwork, posters, and custom digital art commissions.</p>
+          </article>
+          <article class="feature">
+            <div class="ic ic-yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16 M4 12h16"/></svg></div>
+            <h3>Graphic Design &amp; Branding</h3>
+            <p>Logos, visual identity, social media content, banners, merchandise, and event branding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STRENGTHS ============ -->
+    <section class="strengths" id="strengths">
+      <div class="container">
+        <header class="section-head center">
+          <span class="eyebrow">Personal Strengths</span>
+          <h2>What I bring to a team.</h2>
+        </header>
+        <ul class="strength-list">
+          <li><span class="check" aria-hidden="true">✓</span>Able to combine programming and visual design</li>
+          <li><span class="check" aria-hidden="true">✓</span>Fast learner and adaptable</li>
+          <li><span class="check" aria-hidden="true">✓</span>Experienced in both individual and team projects</li>
+          <li><span class="check" aria-hidden="true">✓</span>Interested in solving real-world problems</li>
+          <li><span class="check" aria-hidden="true">✓</span>Detail-oriented in design and development</li>
+          <li><span class="check" aria-hidden="true">✓</span>Comfortable learning new technologies</li>
+          <li><span class="check" aria-hidden="true">✓</span>Strong academic performance</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's build something together.</h2>
+          <p>
+            Open to project collaborations, internships, freelance work, software
+            development, digital art commissions, UI/UX design, and Excel automation.
+          </p>
+
+          <ul class="contact-info">
+            <li>
+              <span class="ci-ic">📍</span>
+              <div><strong>Location</strong><span>Tangerang, Indonesia</span></div>
+            </li>
+            <li>
+              <span class="ci-ic">✉️</span>
+              <div><strong>Email</strong><a href="mailto:hadrian.astrawinata@example.com">hadrian.astrawinata@example.com</a></div>
+            </li>
+            <li>
+              <span class="ci-ic">🐙</span>
+              <div><strong>GitHub</strong><a href="https://github.com/" target="_blank" rel="noopener">github.com/hadrian-astrawinata</a></div>
+            </li>
+            <li>
+              <span class="ci-ic">💼</span>
+              <div><strong>LinkedIn</strong><a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/hadrian-astrawinata</a></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cf-name">Full Name</label>
+            <input id="cf-name" name="name" type="text" placeholder="Your full name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email Address</label>
+            <input id="cf-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject</label>
+            <input id="cf-subject" name="subject" type="text" placeholder="Project, collaboration, or question" required />
+          </div>
+          <div class="field">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" name="message" rows="5" placeholder="Tell me a bit about what you're building..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Send Message →</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <a href="#home" class="brand" aria-label="Hadrian home">
+          <span class="brand-badge" aria-hidden="true">H</span>
+          <span class="brand-name">Hadrian<span class="brand-dot">.</span></span>
+        </a>
+        <p>Digital Business Technology student — building products through code, design, and creativity.</p>
+      </div>
+
+      <div class="foot-cols">
+        <div>
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
+        <div>
+          <h4>Work</h4>
+          <a href="#experience">Experience</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <h4>Elsewhere</h4>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>Designed and developed by I Gede Hadrian Astrawinata.</span>
+      <span>© <span id="year">2026</span> All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
