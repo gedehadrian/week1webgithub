@@ -25,9 +25,9 @@
   --purple: #7c3aed;
   --pink: #ec4899;
 
-  --radius-sm: 10px;
-  --radius: 18px;
-  --radius-lg: 28px;
+  --radius-sm: 14px;
+  --radius: 24px;
+  --radius-lg: 36px;
 
   --container: 1200px;
   --header-h: 72px;
@@ -385,7 +385,7 @@ button { font: inherit; cursor: pointer; }
   width: clamp(120px, 14vw, 180px);
   aspect-ratio: 3 / 4;
   margin-left: calc(-1 * clamp(60px, 7vw, 90px));
-  border-radius: 16px;
+  border-radius: 22px;
   background: #fff;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
@@ -622,6 +622,7 @@ button { font: inherit; cursor: pointer; }
 .d-red { background: var(--red); }
 .d-purple { background: var(--purple); }
 .d-yellow { background: var(--yellow); }
+.d-pink { background: var(--pink); }
 
 .chips {
   list-style: none;
@@ -820,11 +821,11 @@ button { font: inherit; cursor: pointer; }
   position: absolute;
   left: -32px; top: 8px;
   width: 18px; height: 18px;
-  background: var(--green);
+  background: linear-gradient(135deg, var(--purple), var(--pink));
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--bg-elev);
 }
-[data-theme="light"] .tl-marker { box-shadow: 0 0 0 4px #ebebe7; }
+[data-theme="light"] .tl-marker { box-shadow: 0 0 0 4px #fff4fa; }
 .tl-content {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -901,6 +902,7 @@ button { font: inherit; cursor: pointer; }
 .ic-green  { background: var(--green); }
 .ic-orange { background: var(--orange); }
 .ic-red    { background: var(--red); }
+.ic-pink   { background: var(--pink); }
 .ic-yellow { background: var(--yellow); color: #0b0b0d; }
 
 /* ---------- STRENGTHS ---------- */
@@ -927,15 +929,15 @@ button { font: inherit; cursor: pointer; }
   font-weight: 500;
   transition: transform var(--transition), border-color var(--transition);
 }
-.strength-list li:hover { transform: translateY(-2px); border-color: var(--green); }
+.strength-list li:hover { transform: translateY(-2px); border-color: var(--purple); }
 .check {
   width: 24px; height: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: color-mix(in oklab, var(--green) 20%, transparent);
-  color: var(--green);
+  background: color-mix(in oklab, var(--purple) 18%, transparent);
+  color: var(--purple);
   font-weight: 700;
   font-size: 0.85rem;
   flex-shrink: 0;
@@ -943,7 +945,7 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- CONTACT ---------- */
 .contact { padding: 96px 0; background: var(--bg-elev); }
-[data-theme="light"] .contact { background: #ebebe7; }
+[data-theme="light"] .contact { background: #f2f7ff; }
 
 .contact-grid {
   display: grid;
@@ -977,14 +979,14 @@ button { font: inherit; cursor: pointer; }
   border-radius: 14px;
   transition: transform var(--transition), border-color var(--transition);
 }
-.contact-info li:hover { transform: translateY(-2px); border-color: var(--green); }
+.contact-info li:hover { transform: translateY(-2px); border-color: var(--purple); }
 .ci-ic {
   width: 36px; height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: color-mix(in oklab, var(--green) 15%, transparent);
+  background: linear-gradient(135deg, color-mix(in oklab, var(--purple) 18%, transparent), color-mix(in oklab, var(--pink) 18%, transparent));
   flex-shrink: 0;
   font-size: 1.1rem;
 }
@@ -1004,7 +1006,7 @@ button { font: inherit; cursor: pointer; }
   font-weight: 500;
   word-break: break-word;
 }
-.contact-info a:hover { color: var(--green); }
+.contact-info a:hover { color: var(--purple); }
 
 .contact-form {
   background: var(--surface);
@@ -1044,7 +1046,7 @@ button { font: inherit; cursor: pointer; }
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--green);
+  border-color: var(--purple);
   background: var(--bg-elev);
 }
 .field input:invalid:not(:placeholder-shown),
@@ -1054,7 +1056,7 @@ button { font: inherit; cursor: pointer; }
 .form-status {
   margin: 0;
   font-size: 0.9rem;
-  color: var(--green);
+  color: var(--purple);
   min-height: 1.2em;
 }
 .form-status.error { color: var(--red); }
@@ -1101,6 +1103,237 @@ button { font: inherit; cursor: pointer; }
   font-size: 0.85rem;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* ---------- Package cards (art commission pricing) ---------- */
+.pkg { position: relative; overflow: hidden; }
+.pkg .pkg-price {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.pkg .pkg-price strong {
+  font-size: 1.6rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-right: 4px;
+}
+.pkg .pkg-price span { font-size: 0.85rem; }
+.pkg.featured {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(135deg, var(--purple), var(--pink)) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 20px 50px -20px rgba(124, 58, 237, 0.35);
+}
+.pkg-tag {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+.addons-note {
+  margin: 28px auto 0;
+  max-width: 720px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 14px 20px;
+  background: color-mix(in oklab, var(--purple) 6%, transparent);
+  border: 1px dashed color-mix(in oklab, var(--purple) 30%, transparent);
+  border-radius: var(--radius);
+}
+.addons-note strong { color: var(--text); }
+
+/* ---------- Badge (OPEN status in about card) ---------- */
+.badge-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--green) 15%, transparent);
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 20px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.faq-item[open] {
+  border-color: color-mix(in oklab, var(--purple) 30%, transparent);
+  box-shadow: var(--shadow-sm);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--purple);
+  transition: transform var(--transition);
+  line-height: 1;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- Chat card (order via chat only) ---------- */
+.chat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.chat-card::before {
+  content: "";
+  position: absolute;
+  inset: -60% -20% auto auto;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, color-mix(in oklab, var(--pink) 30%, transparent), transparent 60%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+.chat-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+.chat-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 6px;
+}
+.chat-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.chat-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+.chat-ic {
+  width: 44px; height: 44px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  color: #ffffff;
+}
+.chat-ic svg { width: 22px; height: 22px; fill: currentColor; }
+.chat-body {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+.chat-body strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+.chat-body small {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+.chat-arrow {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  transition: transform var(--transition), color var(--transition);
+}
+.chat-btn:hover .chat-arrow { transform: translateX(4px); color: var(--purple); }
+
+.chat-wa .chat-ic { background: #25D366; }
+.chat-ig .chat-ic {
+  background: linear-gradient(135deg, #f9ce34, #ee2a7b 45%, #6228d7);
+}
+
+.chat-note {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--purple) 6%, transparent);
+}
+
+/* ---------- Select field (order form) ---------- */
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color var(--transition), background var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237c3aed' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+.field select:focus {
+  outline: none;
+  border-color: var(--purple);
+  background-color: var(--bg-elev);
 }
 
 /* ---------- Responsive ---------- */
